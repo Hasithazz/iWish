@@ -32,7 +32,9 @@
 //Backbone Model
 
 var UserModel = Backbone.Model.extend({
-    url: 'http://localhost/iWish/homeController/user',
+    url: function () {
+        return 'http://localhost/iWish/homeController/user?user_name=' + this.get('user_name') + '&user_password=' + this.get('user_password')
+    },
     defaults: {
         user_name: null,
         user_password: null
@@ -43,6 +45,7 @@ var UserModel = Backbone.Model.extend({
 var UserCollection = Backbone.Collection.extend({
     url: 'http://localhost/iWish/homeController/user'
 });
+
 
 var users = new UserCollection();
 
@@ -56,7 +59,7 @@ $(document).ready(function () {
         user.fetch({
             success: function (response) {
                 console.log(response.toJSON());
-                
+
             },
             error: function () {
                 console.log("ERROR");

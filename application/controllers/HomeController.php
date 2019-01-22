@@ -32,14 +32,12 @@ class HomeController extends REST_Controller
         $un = $this->get('user_name');//<----------me un ekata data assign wenneth na
         $up = $this->get('user_password');
 
-        echo $un;
-        
 
         if ($un === NULL) {
             // Check if the users data store contains users (in case the database result returns NULL)
             if ($users) {
                 // Set the response and exit
-                $this->response( REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
+                $this->response(REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
             } else {
                 // Set the response and exit
                 $this->response([
@@ -59,13 +57,15 @@ class HomeController extends REST_Controller
             foreach ($users as $key => $value) {
                 if (isset($value['user_name']) && isset($value['user_password']) && $value['user_name'] === $un && $value['user_password'] === $up) {
                     $user = $value;
+                    $this->load->view('HomeView');
+
                 }
             }
         }
 
         if (!empty($user)) {
-            //$this->set_response($user, REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
-            $this->set_response(REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
+            $this->set_response($user, REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
+            //$this->set_response(REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
 
         } else {
             $this->set_response([
