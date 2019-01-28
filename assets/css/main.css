@@ -1,4 +1,9 @@
-.footer{
+.footer {
     background-color: rgb(36, 36, 36);
     height: 10vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }

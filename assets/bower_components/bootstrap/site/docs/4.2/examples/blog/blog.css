@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
- * Blog name and description
+ * ItemListModel name and description
  */
 .blog-title {
   margin-bottom: 0;
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
- * Blog posts
+ * ItemListModel posts
  */
 .blog-post {
   margin-bottom: 4rem;

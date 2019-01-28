@@ -9,12 +9,16 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/bower_components/bootstrap/dist/css/bootstrap.css')?>">    
     <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/loginView.css')?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/homeView.css')?>">
+
+    <link rel="stylesheet" href="<?php echo base_url('assets/node_modules/@fortawesome/fontawesome-free/css/all.min.css')?>">
+
     <!-- end of css -->
     <!-- scripts -->
     <script src="<?php echo base_url('assets/bower_components/jquery/dist/jquery.js')?>"></script>
     <script src="<?php echo base_url('assets/bower_components/underscore/underscore.js')?>"></script>
     <script src="<?php echo base_url('assets/bower_components/backbone/backbone.js')?>"></script>
-    <script src="<?php echo base_url('assets/js/login.js')?>"></script>
+    
 
     <!-- end of scripts  -->
 </head>

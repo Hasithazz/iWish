@@ -1,20 +1,31 @@
 .login.image_pane {
     height: 90vh;
-    background-color: aqua;
+    
 }
 
 .login.image_pane.image {
     margin-left: -15px;
     width: 135vh;
-    height: 90vh;
     padding-left: 0px;
 }
 
 .login.content_pane {
-    height: 90vh;
+
 }
 
 .login.content_pane.form {
     margin-top: 10vh;
     max-height: 80vh;
+}
+
+.login.logo.div {
+    text-align: center;
+}
+
+.login.content_pane.logo.img {
+    height: 18vh;
+    margin-top: 50px;
+}
+.form-control.input{
+    border-radius: 20px;
 }
